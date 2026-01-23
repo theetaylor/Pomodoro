@@ -12,6 +12,7 @@ import { NeuroLockOverlay } from './components/NeuroLockOverlay';
 import { Heatmap } from './components/Heatmap';
 import { FAQSection } from './components/FAQSection';
 import { ClutchConfirmModal } from './components/ClutchConfirmModal';
+import { Analytics } from '@vercel/analytics/react';
 
 const DEFAULT_SETTINGS: TimerSettings = {
   workTime: 25,
@@ -649,6 +650,7 @@ const App: React.FC = () => {
       <footer className="mt-auto pt-12 text-slate-500 text-sm font-medium relative z-10">
         &copy; {new Date().getFullYear()} pomodoro.work — built for focus.
       </footer>
+      <Analytics />
     </div>
   );
 };
